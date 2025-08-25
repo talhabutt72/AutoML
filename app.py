@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 
 st.write("Data Preprocessing")
 file = st.file_uploader("Enter your CSV or Excel dataset", type=["csv", "xlsx"])
@@ -109,4 +107,5 @@ for col in dataset.columns:
         outlier_count = outliers.sum()
         
         if outlier_count > 0:
+
             st.write(f"Total Outliers in '{col}': {outlier_count}")
